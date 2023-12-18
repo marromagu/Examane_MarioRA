@@ -106,7 +106,7 @@ fun AppExamne(modifier: Modifier = Modifier) {
             )
         }
         Button(onClick = {
-
+            if (dineroApostado>0){
             if (loterias.any { it.nombre == loteria }) {
                 vecesJugadas++
                 numeroLoteria = (1..4).random()
@@ -122,7 +122,7 @@ fun AppExamne(modifier: Modifier = Modifier) {
                 totalGastado += dinero.toIntOrNull() ?: 0
             } else {
                 mensajeResultado = "No existe ninguna lotería con ese nombre"
-            } }, modifier = Modifier.align(CenterHorizontally)) {
+            } }}, modifier = Modifier.align(CenterHorizontally)) {
             Text(text = "Jugar loteria escrita")
 
         }
